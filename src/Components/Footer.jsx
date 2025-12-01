@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="text-center">
       <div className="container">
         <small>
-          © {new Date().getFullYear()} Jane Doe. All rights reserved.
+          © {new Date().getFullYear()} Abbdullah Mahmoud. All rights reserved.
         </small>
       </div>
     </footer>
