@@ -1,7 +1,15 @@
 import profilePic from "../assets/profilePic.jpg";
+import { useInView } from "../custom/useInView.js";
 export default function Hero() {
+  const [sectionRef, sectionInView] = useInView();
   return (
-    <header id="hero" className="hero container-fluid fade-in-view">
+    <header
+      id="hero"
+      ref={sectionRef}
+      className={`hero container-fluid fade-up ${
+        sectionInView ? "in-view" : ""
+      }`}
+    >
       <div className="container">
         <div className="row align-items-center gy-4">
           <div className="col-md-7">
@@ -36,6 +44,8 @@ export default function Hero() {
                 alt="Avatar"
                 className="avatar"
                 loading="lazy"
+                width={400}
+                height={300}
               />
               <div className="mt-3">
                 <h5 className="mb-0">Jane Doe</h5>

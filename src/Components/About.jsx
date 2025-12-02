@@ -25,7 +25,11 @@ export default function About({ setActive }) {
   ];
 
   return (
-    <section id="about" ref={ref} className="about-section py-6">
+    <section
+      id="about"
+      ref={ref}
+      className={`about-section py-6 fade-up ${inView ? "in-view" : ""}`}
+    >
       <div className="container">
         <div className="row g-4 align-items-center">
           {/* LEFT SIDE */}
@@ -48,6 +52,7 @@ export default function About({ setActive }) {
                     </div>
                     <div className="progress" style={{ height: 10 }}>
                       <div
+                        id={s.name.toLowerCase()}
                         ref={(el) => (progressRef.current[i] = el)}
                         className="progress-bar progress-animated"
                         role="progressbar"

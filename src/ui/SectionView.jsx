@@ -23,6 +23,6 @@ export default function SectionView({ id, children, setActive, className }) {
 SectionView.propTypes = {
   id: PropTypes.string,
   setActive: PropTypes.func,
-  className: PropTypes.func,
+  className: PropTypes.string,
   children: PropTypes.node,
 };

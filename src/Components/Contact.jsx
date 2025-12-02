@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Contact() {
   useEffect(() => {
@@ -32,30 +32,44 @@ export default function Contact() {
 
             <form id="contactForm" className="needs-validation" noValidate>
               <div className="mb-3">
-                <label className="form-label">Name</label>
+                <label htmlFor="name" className="form-label">
+                  Name
+                </label>
                 <input
                   required
                   type="text"
                   className="form-control"
                   placeholder="Your full name"
+                  name="name"
+                  id="name"
+                  autoComplete="true"
                 />
                 <div className="invalid-feedback">Please enter your name.</div>
               </div>
               <div className="mb-3">
-                <label className="form-label">Email</label>
+                <label className="form-label" htmlFor="email">
+                  Email
+                </label>
                 <input
+                  id="email"
+                  name="email"
                   required
                   type="email"
                   className="form-control"
                   placeholder="you@example.com"
+                  autoComplete="true"
                 />
                 <div className="invalid-feedback">
                   Please provide a valid email.
                 </div>
               </div>
               <div className="mb-3">
-                <label className="form-label">Message</label>
+                <label className="form-label" htmlFor="message">
+                  Message
+                </label>
                 <textarea
+                  id="message"
+                  name="message"
                   required
                   rows="5"
                   className="form-control"
